@@ -7,10 +7,17 @@ import Profile from "@components/Profile";
 
 const UserProfile = ({ params }) => {
     const searchParams = useSearchParams();
-    const userName = searchParams.get("username");
-    const name = searchParams.get("name");
-
     const [userPosts, setUserPosts] = useState([]);
+    const [userName, setUserName] = useState("");
+    const [name, setName] = useState("");
+
+    useEffect(() => {
+        const usernameParam = searchParams.get("username");
+        const nameParam = searchParams.get("name");
+
+        if (usernameParam) setUserName(usernameParam);
+        if (nameParam) setName(nameParam);
+    }, [searchParams]);
 
     useEffect(() => {
         const fetchPosts = async () => {
