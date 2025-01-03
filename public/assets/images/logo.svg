@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <!-- Background Circle -->
+    <circle cx="30" cy="30" r="30" fill="#6C63FF" />
+
+    <!-- Speech Bubble Icon -->
+    <path
+        d="M15 20h30c2.5 0 4.5 2 4.5 4.5v15c0 2.5-2 4.5-4.5 4.5H25l-8 8v-8h-2c-2.5 0-4.5-2-4.5-4.5v-15C10.5 22 12.5 20 15 20z"
+        fill="#FFF" />
+</svg>
