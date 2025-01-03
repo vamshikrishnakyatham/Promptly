@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
 import Profile from "@components/Profile";
@@ -31,11 +31,13 @@ const UserProfile = ({ params }) => {
     }, [params.id]);
 
     return (
-        <Profile
-            name={name}
-            desc={`Discover ${name}'s creative portfolio. Browse through their curated collection of innovative prompts and professional work`}
-            data={userPosts}
-        />
+        <Suspense>
+            <Profile
+                name={name}
+                desc={`Discover ${name}'s creative portfolio. Browse through their curated collection of innovative prompts and professional work`}
+                data={userPosts}
+            />
+        </Suspense>
     );
 };
 
